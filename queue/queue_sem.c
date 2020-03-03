@@ -8,7 +8,7 @@
 #include "../utility/utils.h"
 #include "../sem/sem.h"
 
-#define NUM_CHILDREN 2
+#define NUM_CHILDREN 4
 #define NUM_ITEMS 127
 
 // QUEUE
@@ -169,6 +169,8 @@ int main() {
 
     child[0] = make_thread(producer_entry, shared);
     child[1] = make_thread(consumer_entry, shared);
+    child[2] = make_thread(producer_entry, shared);
+    child[3] = make_thread(consumer_entry, shared);
 
     for (i = 0; i < NUM_CHILDREN; i++) {
         join_thread(child[i]);
