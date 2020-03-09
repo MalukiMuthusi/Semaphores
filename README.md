@@ -1,5 +1,5 @@
-# threading
+# Semaphores
 
 Many producers and consumers.
 
-Using Mutex to synchronise reading and writing to the buffer.
+Using Semaphores to synchronise reading and writing to the buffer.
